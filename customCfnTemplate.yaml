@@ -86,3 +86,11 @@ Resources:
       Handler: CloudFormationCognitoUserPoolDomain.handler
       Role: !GetAtt LambdaForCloudFormation.Arn
     DependsOn: CloudFormationSendResponse
+
+Outputs:
+  CloudFormationCognitoUserPoolDomain:
+    Description: "Custom Cfn for Cognito User Pool Domains"
+    Value: !GetAtt CloudFormationCognitoUserPoolDomain.Arn
+  CloudFormationCognitoUserPoolClientSettings:
+    Description: "Custom Cfn for Cognito User Pool Client Settings"
+    Value: !GetAtt CloudFormationCognitoUserPoolClientSettings.Arn
